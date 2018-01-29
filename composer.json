@@ -1,0 +1,13 @@
+{
+    "name": "molsm/magento2-frontools",
+    "description": "Set of front-end tools for Magento 2. Creating new theme / handling theme assets",
+    "type": "magento2-component",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Maris Mols",
+            "email": "maris9229@gmail.com"
+        }
+    ],
+    "require": {}
+}
