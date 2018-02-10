@@ -5,7 +5,9 @@ const application = require('../application'),
 module.exports = function() {
     application.setWatchTask();
 
-    watch(application.path(application.config().watch.scss.source), application.config().watch.scss.options, function() {
-        return sequence(...application.config().watch.scss.tasks);
+    application.getScssSources().forEach(config => {
+        watch(config.source, application.config().watch.scss.options, () => {
+            return sequence(...application.config().watch.scss.tasks);
+        });
     });
 };

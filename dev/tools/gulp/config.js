@@ -2,8 +2,8 @@ const path = require('path');
 
 module.exports = {
     tasks: {
-        list: ['bower', 'scss', 'copy-js', 'browser-sync', 'clean-cache'],
-        default: ['scss', 'copy-js']
+        list: ['scss'],
+        default: ['scss']
     },
 
     autoprefixer: {
@@ -19,7 +19,7 @@ module.exports = {
         },
 
         linting: {
-            config: path.resolve(__dirname, '/../.scss-lint.yml')
+            config: path.resolve(__dirname, '../../../', '.scss-lint.yml')
         }
     },
 
@@ -31,7 +31,7 @@ module.exports = {
     watch: {
         scss: {
             source: '/web/assets/scss/**/*.scss',
-            tasks: ['copy-js', 'scss'],
+            tasks: ['scss'],
             options: { ignoreInitial: false }
         }
     }

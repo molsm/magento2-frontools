@@ -27,6 +27,10 @@
     "run-sequence": "^1.2.2"
   },
   "scripts": {
-    "gulp": "gulp --production"
+    "build": "gulp --production",
+    "watch": "gulp watch"
+  },
+  "dependencies": {
+    "merge-stream": "^1.0.1"
   }
 }
