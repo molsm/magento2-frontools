@@ -1,0 +1,4 @@
+const application = require('./gulp/application').run(__dirname),
+    gulp = require('gulp');
+
+gulp.tasks = application.tasks;

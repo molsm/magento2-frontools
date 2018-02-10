@@ -9,5 +9,15 @@
             "email": "maris9229@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "magento/magento2-base": "^2.2"
+    },
+    "extra": {
+        "map": [
+            [
+                "gulpfile.js.sample",
+                "gulpfile.js.sample"
+            ]
+        ]
+    }
 }
