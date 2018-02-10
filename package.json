@@ -1,0 +1,32 @@
+{
+  "name": "magento2-frontools",
+  "version": "1.0.0",
+  "description": "Set of front-end tools for Magento 2. Creating handling theme assets",
+  "main": "gulpfile.js",
+  "author": "Maris Mols",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.18.7",
+    "eslint": "^3.15.0",
+    "eslint-config-airbnb-base": "^11.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-bower": "0.0.13",
+    "gulp-csso": "^2.0.0",
+    "gulp-eslint": "^3.0.1",
+    "gulp-if": "^2.0.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-scss-lint": "^0.4.0",
+    "gulp-shell": "^0.5.2",
+    "gulp-sourcemaps": "^2.4.1",
+    "gulp-util": "^3.0.8",
+    "gulp-wait": "0.0.2",
+    "gulp-watch": "^4.3.11",
+    "path": "^0.12.7",
+    "run-sequence": "^1.2.2"
+  },
+  "scripts": {
+    "gulp": "gulp --production"
+  }
+}

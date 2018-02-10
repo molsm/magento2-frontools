@@ -17,6 +17,18 @@
             [
                 "gulpfile.js.sample",
                 "gulpfile.js.sample"
+            ],
+            [
+                ".scss-lint.yml",
+                ".scss-lint.yml",
+            ],
+            [
+                "package.json",
+                "package.json"
+            ],
+            [
+                "dev/tools/gulp",
+                "dev/tools/gulp"
             ]
         ]
     }
