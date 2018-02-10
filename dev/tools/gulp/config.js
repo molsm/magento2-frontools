@@ -3,7 +3,7 @@ const path = require('path');
 module.exports = {
     tasks: {
         list: ['bower', 'scss', 'copy-js', 'browser-sync', 'clean-cache'],
-        default: ['bower', 'scss', 'copy-js']
+        default: ['scss', 'copy-js']
     },
 
     autoprefixer: {
@@ -31,7 +31,7 @@ module.exports = {
     watch: {
         scss: {
             source: '/web/assets/scss/**/*.scss',
-            tasks: ['copy-js', 'scss', 'clean-cache'],
+            tasks: ['copy-js', 'scss'],
             options: { ignoreInitial: false }
         }
     }

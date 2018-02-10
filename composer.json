@@ -29,6 +29,10 @@
             [
                 "dev/tools/gulp",
                 "dev/tools/gulp"
+            ],
+            [
+                "theme.js.sample",
+                "theme.js.sample"
             ]
         ]
     }
