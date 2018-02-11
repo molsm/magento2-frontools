@@ -1,11 +1,14 @@
+'use strict';
+
 process.env.NODE_ENV = require('gulp-util').env.production ? 'production' : 'development';
 
 const path = require('path'),
     configuration = require('./config'),
-    themes = require('../../../theme');
+    themes = require('../../../theme'),
     rootDirectory = path.resolve(__dirname, '..'),
     gutils = require('gulp-util'),
     gulp = require('gulp'),
+    _ = require('lodash'),
     sequence = require('run-sequence');
 
 let isWatchTask = false,
@@ -26,25 +29,22 @@ module.exports = {
 
     getScssSources() {
         let themeRegister = [];
-        Object.keys(themes).forEach((themeId) => {
-            let theme = themes[themeId];
-            themeRegister.push(Object.assign({}, configuration.scss, theme, {
-                    source: path.resolve(
-                        rootDirectory,
-                        '../..', 'app/design',
-                        theme.area,
-                        theme.name
-                    ) + configuration.scss.source,
-                    destination: path.resolve(
-                        rootDirectory, '../..',
-                        'app/design',
-                        theme.area,
-                        theme.name
-                    ) + configuration.scss.destination,
-                    autoprefixer: configuration.autoprefixer
-                })
-            );
+
+        _.forEach(themes, (theme, key) => {
+            let sourcePath = path.resolve(rootDirectory, '../..', 'app/design', theme.area, theme.name)
+                + (theme.source ? theme.source : configuration.scss.source);
+            let destinationPath = path.resolve(rootDirectory, '../..', 'app/design', theme.area, theme.name)
+            + (theme.destination ? theme.destination : configuration.scss.destination);
+
+            let buildedTheme = {
+                source: sourcePath,
+                destination: destinationPath,
+                autoprefixer: configuration.autoprefixer
+            };
+
+            themeRegister.push(buildedTheme);
         });
+
         return themeRegister;
     },
 
