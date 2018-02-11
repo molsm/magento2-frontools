@@ -1,13 +1,13 @@
 const application = require('../application'),
-    sequence = require('run-sequence'),
-    watch = require('gulp-watch');
+    watch = require('gulp-watch'),
+    sccsConstructor = require('./helper/scss-constructor');
 
-module.exports = function() {
+module.exports = () => {
     application.setWatchTask();
 
     application.getScssSources().forEach(config => {
         watch(config.source, application.config().watch.scss.options, () => {
-            return sequence(...application.config().watch.scss.tasks);
+            sccsConstructor(config);
         });
     });
 };

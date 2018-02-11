@@ -31,7 +31,6 @@ module.exports = {
     watch: {
         scss: {
             source: '/web/assets/scss/**/*.scss',
-            tasks: ['scss'],
             options: { ignoreInitial: false }
         }
     }
